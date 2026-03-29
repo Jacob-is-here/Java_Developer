@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.27.xsd">
+
+    <changeSet id="001-create-producers" author="copilot">
+        <createTable tableName="producers">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_producers"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uk_producer_name"/>
+            </column>
+            <column name="country" type="VARCHAR(128)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="002-create-products" author="copilot">
+        <createTable tableName="products">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_products"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(1000)"/>
+            <column name="price" type="DECIMAL(19,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="producer_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="attributes_json" type="CLOB"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="products"
+                                 baseColumnNames="producer_id"
+                                 constraintName="fk_products_producer"
+                                 referencedTableName="producers"
+                                 referencedColumnNames="id"/>
+
+        <createIndex tableName="products" indexName="idx_products_producer_id">
+            <column name="producer_id"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="003-seed-producers" author="copilot">
+        <insert tableName="producers">
+            <column name="name" value="Samsung"/>
+            <column name="country" value="South Korea"/>
+        </insert>
+        <insert tableName="producers">
+            <column name="name" value="Apple"/>
+            <column name="country" value="USA"/>
+        </insert>
+        <insert tableName="producers">
+            <column name="name" value="Dell"/>
+            <column name="country" value="USA"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
+

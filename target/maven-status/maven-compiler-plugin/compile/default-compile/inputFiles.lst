@@ -1,0 +1,17 @@
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/DemoApplication.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/controller/ProducerController.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/controller/ProductController.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/dto/ProducerResponse.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/dto/ProductRequest.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/dto/ProductResponse.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/exception/ApiError.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/exception/GlobalExceptionHandler.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/exception/NotFoundException.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/mapper/ProductMapper.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/model/MapToJsonConverter.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/model/Producer.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/model/Product.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/repository/ProducerRepository.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/repository/ProductRepository.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/service/ProducerService.java
+/Users/jakub/Documents/Projekty_cloude/demo/src/main/java/com/example/demo/catalog/service/ProductService.java
